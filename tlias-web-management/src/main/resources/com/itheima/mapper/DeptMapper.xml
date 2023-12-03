@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+1. xml映射文件的名称与mapper接口名称一致，并且将xml映射文件和mapper接口放在同一包下；
+2. xml映射文件的namespace属性与mapper接口全限定名一致
+3. xml映射文件中sql语句的id与mapper接口中的方法名一致，并且保持返回类型一致
+-->
+<mapper namespace="com.itheima.mapper.DeptMapper">
+    <select id="list" resultType="com.itheima.pojo.Dept">
+        select *
+        from dept;
+    </select>
+
+    <!--    <delete id="delete">-->
+    <!--        delete-->
+    <!--        from dept-->
+    <!--        where id = #{id}-->
+    <!--    </delete>-->
+</mapper>

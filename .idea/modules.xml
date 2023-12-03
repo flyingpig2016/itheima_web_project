@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/itheima_web_project.iml" filepath="$PROJECT_DIR$/itheima_web_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mystudy/mystudy.iml" filepath="$PROJECT_DIR$/mystudy/mystudy.iml" />
+    </modules>
+  </component>
+</project>
