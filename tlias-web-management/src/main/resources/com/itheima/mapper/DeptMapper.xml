@@ -18,4 +18,30 @@
     <!--        from dept-->
     <!--        where id = #{id}-->
     <!--    </delete>-->
+
+    <insert id="addDept">
+        insert into dept (name, create_time, update_time)
+        values (#{name}, #{createTime}, #{updateTime})
+    </insert>
+
+    <!--    <select id="getDept" resultType="com.itheima.pojo.Dept">-->
+    <!--        select *-->
+    <!--        from dept-->
+    <!--        where id = #{id}-->
+    <!--    </select>-->
+    <update id="updateDept">
+        update dept
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
 </mapper>
