@@ -22,7 +22,7 @@ public class DeptController {
 //    查询部门 *********
     @GetMapping("/depts")
     public Result list() {
-        System.out.println("查询全部部门数据"); //不专业
+//        System.out.println("查询全部部门数据"); //不专业
         log.info("查询全部部门数据");
 
 //      调用service来进行查询的逻辑
@@ -59,7 +59,7 @@ public class DeptController {
     @PutMapping("/depts")
     public Result updateDept(@RequestBody Dept dept) {
         System.out.println(dept.toString());
-        
+
         deptService.updateDept(dept);
         return Result.success();
     }
