@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0bd5790-b71a-47bb-abcd-136b3d75e03a" name="变更" comment="">
+    <list default="true" id="f0bd5790-b71a-47bb-abcd-136b3d75e03a" name="变更" comment="变更">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d4cfee1-5635-48ea-b185-8545b8da917c/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlias-web-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tlias-web-management/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +90,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="/usr/local/apache-maven-3.8.6/mvn_repo" />
-        <option name="mavenHome" value="/usr/local/apache-maven-3.8.6" />
-        <option name="useMavenConfig" value="true" />
-        <option name="userSettingsFile" value="/usr/local/apache-maven-3.8.6/conf/settings.xml" />
+        <option name="localRepository" value="$MAVEN_REPOSITORY$/apache-maven-3.9.4/jar" />
+        <option name="userSettingsFile" value="$MAVEN_REPOSITORY$/apache-maven-3.9.4/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -94,6 +106,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2NPDBlZnjaIasoHdia7LpKxjUKX" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -119,7 +134,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "openjdk-17",
-    "last_opened_file_path": "/Users/flyingpig/study/java/itheima_web_project",
+    "last_opened_file_path": "/Users/flyingpig/study/java/project/myProject/itheima_web_project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -141,6 +156,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/springboot-mybatis-crud/src/main/resources" />
       <recent name="$PROJECT_DIR$/springboot-mybatis-crud/src/main/java/com/itheima" />
     </key>
@@ -345,11 +361,25 @@
       <workItem from="1700758033838" duration="1799000" />
       <workItem from="1701485734637" duration="308000" />
       <workItem from="1701486192224" duration="26724000" />
+      <workItem from="1701654708085" duration="161000" />
+      <workItem from="1701654938932" duration="1472000" />
+      <workItem from="1701674078150" duration="3178000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
