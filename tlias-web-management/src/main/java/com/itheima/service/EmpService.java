@@ -1,10 +1,8 @@
 package com.itheima.service;
 
-import com.itheima.pojo.Emp;
-
-import java.util.List;
+import com.itheima.pojo.PageBean;
 
 public interface EmpService {
 
-    List<Emp> list();
+    PageBean page(Integer page, Integer pageSize);
 }

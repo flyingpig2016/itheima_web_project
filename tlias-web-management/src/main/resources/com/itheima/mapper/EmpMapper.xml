@@ -8,8 +8,14 @@
 3. xml映射文件中sql语句的id与mapper接口中的方法名一致，并且保持返回类型一致
 -->
 <mapper namespace="com.itheima.mapper.EmpMapper">
+    <select id="page" resultType="com.itheima.pojo.Emp">
+        select *
+        from emp
+        limit #{start},#{pageSize};
+    </select>
+
     <select id="list" resultType="com.itheima.pojo.Emp">
         select *
-        from emp;
+        from emp
     </select>
 </mapper>

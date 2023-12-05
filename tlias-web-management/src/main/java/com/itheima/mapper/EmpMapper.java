@@ -7,5 +7,11 @@ import java.util.List;
 
 @Mapper
 public interface EmpMapper {
-    List<Emp> list();
+
+//    @Select("select count(*) from emp")
+//    public Long count();
+
+//    List<Emp> page(Integer start, Integer pageSize);
+
+    public List<Emp> list();
 }
