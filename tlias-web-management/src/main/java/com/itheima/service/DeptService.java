@@ -16,6 +16,7 @@ public interface DeptService {
     public Dept getDept(Integer id);
 
     public void updateDept(Dept dept);
+
 }
 
 

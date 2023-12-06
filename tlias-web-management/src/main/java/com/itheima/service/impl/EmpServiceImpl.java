@@ -9,6 +9,7 @@ import com.itheima.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -17,7 +18,7 @@ public class EmpServiceImpl implements EmpService {
     private EmpMapper empMapper;
 
     @Override
-    public PageBean page(Integer page, Integer pageSize) {
+    public PageBean page(Integer page, Integer pageSize, String name, Short gender, LocalDate begin, LocalDate end) {
         //以下比较繁琐，使用分页插件PageHelper
 //        Integer start = (page - 1) * pageSize;
 //
@@ -33,7 +34,7 @@ public class EmpServiceImpl implements EmpService {
         PageHelper.startPage(page, pageSize);
 
         //2. 这个Page类可以 查询总数据条数和 分页查询的list
-        List<Emp> empList = empMapper.list();
+        List<Emp> empList = empMapper.list(name, gender, begin, end);
         Page<Emp> p = (Page<Emp>) empList;
 
         //3. 封装PageBean对象
