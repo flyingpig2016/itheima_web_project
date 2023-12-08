@@ -15,4 +15,9 @@ public interface EmpMapper {
 //    List<Emp> page(Integer start, Integer pageSize);
 
     public List<Emp> list(String name, Short gender, LocalDate begin, LocalDate end);
+
+    public void delete(List<Integer> ids);
+
+    //    @Insert("insert into emp (username ))
+    public void insert(Emp emp);
 }

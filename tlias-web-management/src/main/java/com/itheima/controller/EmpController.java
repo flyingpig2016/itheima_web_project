@@ -1,16 +1,16 @@
 package com.itheima.controller;
 
+import com.itheima.pojo.Emp;
 import com.itheima.pojo.PageBean;
 import com.itheima.pojo.Result;
 import com.itheima.service.EmpService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -30,5 +30,19 @@ public class EmpController {
 
         PageBean pageBean = empService.page(page, pageSize, name, gender, begin, end);
         return Result.success(pageBean);
+    }
+
+    @DeleteMapping("/emps/{ids}")
+    public Result delete(@PathVariable List<Integer> ids) {
+        log.info("批量删除，ids参数{}", ids);
+        empService.delete(ids);
+        return Result.success();
+    }
+
+    @PostMapping
+    public Result insert(@RequestBody Emp emp) {
+        log.info("新增员工, 参数{}", emp);
+        empService.insert(emp);
+        return Result.success();
     }
 }
