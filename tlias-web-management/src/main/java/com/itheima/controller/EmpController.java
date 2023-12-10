@@ -39,7 +39,7 @@ public class EmpController {
         return Result.success();
     }
 
-    @PostMapping
+    @PostMapping("/emps")
     public Result insert(@RequestBody Emp emp) {
         log.info("新增员工, 参数{}", emp);
         empService.insert(emp);
