@@ -2,6 +2,7 @@ package com.itheima.mapper;
 
 import com.itheima.pojo.Emp;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -20,4 +21,7 @@ public interface EmpMapper {
 
     //    @Insert("insert into emp (username ))
     public void insert(Emp emp);
+
+    @Select("select * from emp where id=#{id}")
+    public Emp getEmpbyId(Integer id);
 }
