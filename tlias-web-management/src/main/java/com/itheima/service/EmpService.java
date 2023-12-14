@@ -15,4 +15,6 @@ public interface EmpService {
     void insert(Emp emp);
 
     Emp getEmpbyId(Integer id);
+
+    void updateEmp(Emp emp);
 }

@@ -24,4 +24,6 @@ public interface EmpMapper {
 
     @Select("select * from emp where id=#{id}")
     public Emp getEmpbyId(Integer id);
+
+    public void updateEmp(Emp emp);
 }
