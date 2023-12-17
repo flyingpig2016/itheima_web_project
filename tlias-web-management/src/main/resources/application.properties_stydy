@@ -11,3 +11,4 @@ aliyun.oss.endpoint=https://oss-cn-hangzhou.aliyuncs.com
 aliyun.oss.accessKeyId=LTAI4GCH1vX6DKqJWxd6nEuW
 aliyun.oss.accessKeySecret=yBshYweHOpqDuhCArrVHwIiBKpyqSL
 aliyun.oss.bucketName=web-tlias
+
