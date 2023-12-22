@@ -1,4 +1,4 @@
-package com.itheima.pojo;
+package com.itheima.utils;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
