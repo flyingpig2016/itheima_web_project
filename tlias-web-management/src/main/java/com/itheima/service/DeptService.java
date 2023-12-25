@@ -9,7 +9,7 @@ public interface DeptService {
 
     public List<Dept> list();
 
-    public void delete(Integer id);
+    public void delete(Integer id) throws Exception;
 
     public void addDept(Dept dept);
 

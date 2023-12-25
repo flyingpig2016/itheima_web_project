@@ -21,3 +21,8 @@ aliyun:
     accessKeyId: LTAI4GCH1vX6DKqJWxd6nEuW
     accessKeySecret: yBshYweHOpqDuhCArrVHwIiBKpyqSL
     bucketName: web-tlias
+
+#spring事务管理日志
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug

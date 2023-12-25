@@ -19,4 +19,7 @@ public interface EmpService {
     void updateEmp(Emp emp);
 
     Emp login(Emp emp);
+
+    void deleteByDeptId(Integer deptId);
+
 }

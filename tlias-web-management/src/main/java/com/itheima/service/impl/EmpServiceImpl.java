@@ -72,4 +72,10 @@ public class EmpServiceImpl implements EmpService {
         return empMapper.getByUsernameAndPassword(emp);
     }
 
+    //    根据部门id来删除部门下的员工
+    @Override
+    public void deleteByDeptId(Integer deptId) {
+        empMapper.deleteByDeptId(deptId);
+    }
+
 }

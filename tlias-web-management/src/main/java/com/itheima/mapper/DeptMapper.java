@@ -20,6 +20,7 @@ public interface DeptMapper {
 
     @Select("select * from dept where id = #{id}")
     Dept getDept(Integer id);
-    
+
     void updateDept(Dept dept);
+    
 }
