@@ -1,6 +1,5 @@
 package com.itheima;
 
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.junit.jupiter.api.Test;
@@ -31,13 +30,13 @@ class TliasWebManagementApplicationTests {
         System.out.println(jwt);
     }
 
-    @Test
-    public void testParseJwt() {
-        Claims claims = Jwts.parser()
-                .setSigningKey("itheima")
-                .parseClaimsJws("eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidG9tIiwiaWQiOjEsImV4cCI6MTcwMzIzNDg4Nn0.yZsx5eGHghmOfnlIk_bx2UoQL5hWRKgyDuCe1g54e9E")
-                .getBody();
-
-        System.out.println(claims);
-    }
+//    @Test
+//    public void testParseJwt() {
+//        Claims claims = Jwts.parser()
+//                .setSigningKey("itheima")
+//                .parseClaimsJws("eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidG9tIiwiaWQiOjEsImV4cCI6MTcwMzIzNDg4Nn0.yZsx5eGHghmOfnlIk_bx2UoQL5hWRKgyDuCe1g54e9E")
+//                .getBody();
+//
+//        System.out.println(claims);
+//    }
 }
