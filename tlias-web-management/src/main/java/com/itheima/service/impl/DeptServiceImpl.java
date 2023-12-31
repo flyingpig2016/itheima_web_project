@@ -1,5 +1,6 @@
 package com.itheima.service.impl;
 
+import com.itheima.aop.Mylog;
 import com.itheima.mapper.DeptMapper;
 import com.itheima.mapper.EmpMapper;
 import com.itheima.pojo.Dept;
@@ -25,19 +26,22 @@ public class DeptServiceImpl implements DeptService {
     @Autowired
     private DeptLogService deptLogService;
 
+    @Mylog
     @Override
     public List<Dept> list() {
         return deptMapper.list();
     }
 
     //    删除部门 并且删除该部门下的员工,并且可以支持回滚
+
+    @Mylog
     @Transactional(rollbackFor = Exception.class) //spring事务管理
     @Override
     public void delete(Integer id) throws Exception {
         // ctrl + alt + t 或者 option + command + T
         try {
             deptMapper.delete(id);
-            int i = 1 / 0; //可以回滚
+//            int i = 1 / 0; //可以回滚
 //        if (true) {
 //            throw new Exception("出错了...."); //不能回滚
 //        }

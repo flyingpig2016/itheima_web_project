@@ -11,7 +11,9 @@ import org.springframework.stereotype.Component;
 public class MyAspect {
 
     //    声明成public，其他地方可以使用pt()
-    @Pointcut("execution(* com.itheima.service.impl.DeptServiceImpl.*(..))")
+//    @Pointcut("execution(* com.itheima.service.impl.DeptServiceImpl.*(..))")
+    // 我要匹配的方法上面加有@Mylog的注解
+    @Pointcut("@annotation(com.itheima.aop.Mylog)")
     public void pt() {
     }
 
