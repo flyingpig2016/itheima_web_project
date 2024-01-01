@@ -5,6 +5,8 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 @Slf4j
 @Aspect
 @Component
@@ -25,11 +27,20 @@ public class MyAspect {
     @Around("pt()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         log.info("around before...");
-//        调用目标对象的原始方法
+
+//        1. 获取 目标对象的类名
+        log.info("目标对象的类名是:{}", proceedingJoinPoint.getTarget().getClass().getName());
+//        2. 获取 目标方法的方法名
+        log.info("目标方法的方法名是:{}", proceedingJoinPoint.getSignature().getName());
+//        3. 获取目标方法运行时传入的参数
+        Object[] args = proceedingJoinPoint.getArgs();
+        log.info("目标方法运行时传入的参数是:{}", Arrays.toString(args));
+//        4. 目标方法执行
+        log.info("目标方法运行:{}proceedingJoinPoint.proceed()");
         Object result = proceedingJoinPoint.proceed();
-
+//        5. 获取目标方法运行的返回值
+        log.info("目标方法运行的返回值是:{}", result);
         log.info("around after...");
-
         return result;
     }
 
