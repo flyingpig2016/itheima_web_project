@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.itheima.anno.Log;
 import com.itheima.pojo.Emp;
 import com.itheima.pojo.PageBean;
 import com.itheima.pojo.Result;
@@ -33,6 +34,7 @@ public class EmpController {
         return Result.success(pageBean);
     }
 
+    @Log()
     @DeleteMapping("/{ids}")
     public Result delete(@PathVariable List<Integer> ids) {
         log.info("批量删除，ids参数{}", ids);
@@ -40,6 +42,7 @@ public class EmpController {
         return Result.success();
     }
 
+    @Log()
     @PostMapping
     public Result insert(@RequestBody Emp emp) {
         log.info("新增员工, 参数{}", emp);
@@ -55,6 +58,7 @@ public class EmpController {
         return Result.success(emp);
     }
 
+    @Log()
     @PutMapping
     public Result updateEmp(@RequestBody Emp emp) {
         log.info("编辑员工, 参数{}", emp);

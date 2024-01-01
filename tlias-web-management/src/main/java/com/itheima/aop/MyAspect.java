@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 @Slf4j
-@Aspect
+//@Aspect
 @Component
 public class MyAspect {
 
