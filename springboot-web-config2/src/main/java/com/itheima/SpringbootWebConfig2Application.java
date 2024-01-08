@@ -1,11 +1,15 @@
 package com.itheima;
 
+import com.example.EnableHeaderConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.itheima", "com.example"})
+//@ComponentScan({"com.itheima", "com.example"})
+//@Import({TokenParser.class}) //导入普通类
+//@Import(HeaderConfig.class) //导入配置类
+//@Import({MyImportSelector.class}) //导入ImportSelector接口实现类
+@EnableHeaderConfig //相当于
 public class SpringbootWebConfig2Application {
 
     public static void main(String[] args) {
