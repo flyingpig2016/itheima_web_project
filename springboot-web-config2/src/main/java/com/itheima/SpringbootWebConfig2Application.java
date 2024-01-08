@@ -1,11 +1,11 @@
 package com.itheima;
 
-import org.dom4j.io.SAXReader;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan({"com.itheima", "com.example"})
 public class SpringbootWebConfig2Application {
 
     public static void main(String[] args) {

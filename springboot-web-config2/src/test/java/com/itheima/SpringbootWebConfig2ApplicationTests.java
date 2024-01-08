@@ -2,15 +2,16 @@ package com.itheima;
 
 import com.itheima.controller.DeptController;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootTest
+@ComponentScan({"com.example", "com.itheima"})
 class SpringbootWebConfig2ApplicationTests {
 
     @Autowired
@@ -18,7 +19,7 @@ class SpringbootWebConfig2ApplicationTests {
 
     //获取bean对象
     @Test
-    public void testGetBean(){
+    public void testGetBean() {
         //根据bean的名称获取
         DeptController bean1 = (DeptController) applicationContext.getBean("deptController");
         System.out.println(bean1);
@@ -35,7 +36,7 @@ class SpringbootWebConfig2ApplicationTests {
 
     //bean的作用域
     @Test
-    public void testScope(){
+    public void testScope() {
         for (int i = 0; i < 10; i++) {
             DeptController deptController = applicationContext.getBean(DeptController.class);
             System.out.println(deptController);
@@ -60,7 +61,7 @@ class SpringbootWebConfig2ApplicationTests {
 
 
     @Test
-    public void testGetBean2(){
+    public void testGetBean2() {
         Object saxReader = applicationContext.getBean("reader");
         System.out.println(saxReader);
     }
