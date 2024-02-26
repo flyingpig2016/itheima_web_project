@@ -9,6 +9,7 @@ import com.itheima.service.DeptLogService;
 import com.itheima.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
@@ -35,7 +36,9 @@ public class DeptServiceImpl implements DeptService {
     //    删除部门 并且删除该部门下的员工,并且可以支持回滚
 
     @Mylog
-    @Transactional(rollbackFor = Exception.class) //spring事务管理
+//    @Transactional(propagation = Propagation.REQUIRED) //默认为REQUIRED
+//    @Transactional(rollbackFor = Exception.class) // rollbackFor出现任何异常都回滚事务
+    @Transactional(propagation = Propagation.REQUIRES_NEW) //开启新事务 才能记录日志
     @Override
     public void delete(Integer id) throws Exception {
         // ctrl + alt + t 或者 option + command + T
@@ -43,10 +46,10 @@ public class DeptServiceImpl implements DeptService {
             deptMapper.delete(id);
 //            int i = 1 / 0; //可以回滚
 //        if (true) {
-//            throw new Exception("出错了...."); //不能回滚
+//            throw new Exception("`出错了...."); //不能回滚
 //        }
             empMapper.deleteByDeptId(id); //根据部门id删除下面的员工数据
-        } finally {
+        } finally { //块中放无论是否发生异常都会执行的代码
             //记录操作日志
             DeptLog deptLog = new DeptLog();
             deptLog.setCreateTime(LocalDateTime.now());
