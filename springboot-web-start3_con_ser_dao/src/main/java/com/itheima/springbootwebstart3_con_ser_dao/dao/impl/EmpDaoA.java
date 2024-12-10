@@ -6,6 +6,7 @@ import com.itheima.springbootwebstart3_con_ser_dao.utils.XmlParserUtils;
 
 import java.util.List;
 
+//数据访问实现类
 public class EmpDaoA implements EmpDao {
     @Override
     public List<Emp> listEmp() {
