@@ -11,6 +11,9 @@ import java.util.List;
 /*
     数据访问实现类,
     使用Spring提供的注解：@Component ，就可以实现类交给IOC容器管理
+    - @Controller    （标注在控制层类上）
+    - @Service          （标注在业务层类上）
+    - @Repository    （标注在数据访问层类上）
  */
 //@Component
 @Repository //相当于 @Component
