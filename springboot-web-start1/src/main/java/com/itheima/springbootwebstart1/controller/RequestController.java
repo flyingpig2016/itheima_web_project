@@ -11,21 +11,23 @@ import java.util.List;
 @RestController
 public class RequestController {
 
-//    @RequestMapping("/simpleParam")
-//    public String simpleParam(HttpServletRequest request){
-//        String name = request.getParameter("name");
-//        String ageStr = request.getParameter("age");
-//        int age = Integer.parseInt(ageStr);
-//        System.out.println("simpleParam接口 name="+name+",age="+age);
-//        return "success";
-//    }
+    // @RequestMapping("/simpleParam")
+    // public String simpleParam(HttpServletRequest request){
+    // String name = request.getParameter("name");
+    // String ageStr = request.getParameter("age");
+    // int age = Integer.parseInt(ageStr);
+    // System.out.println("simpleParam接口 name="+name+",age="+age);
+    // return "success";
+    // }
 
-//    @RequestMapping("/simpleParam")
-//    public String simpleParam2(@RequestParam(name="name",required = false) String username, Integer age){
-//        System.out.println("simpleParam2接口username="+username+",age="+age);
-//        return "success";
-//    }
+    // @RequestMapping("/simpleParam")
+    // public String simpleParam2(@RequestParam(name="name",required = false) String
+    // username, Integer age){
+    // System.out.println("simpleParam2接口username="+username+",age="+age);
+    // return "success";
+    // }
 
+    // 仅 支持query/form 参数,是否支持从 body（请求体）中读取参数，取决于你方法参数的注解和请求方式
     @RequestMapping("/simpleParam")
     public String simpleParam3(User user) {
         System.out.println("simpleParam1接口user=" + user);
@@ -68,6 +70,5 @@ public class RequestController {
         System.out.println("path接口id=" + id + ",name=" + name);
         return "success";
     }
-
 
 }
