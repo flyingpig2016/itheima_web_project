@@ -1,24 +1,10 @@
-# vue-project
+## 环境准备
 
-## Project setup
-```
-npm install
-```
+| 环境     | 版本号     |
+|--------|---------|
+| nodeJs | 16.19.1 |
+| NPM    | 8.19.3  |
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 如何启动项目？
+1. 在项目目录下通过指令 ```npm install```进行项目依赖的安装
+2. 在项目目录下执行指令 ```npm run dev```启动项目
