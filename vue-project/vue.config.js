@@ -14,6 +14,7 @@ const name = defaultSettings.title || 'vue Admin Template' // page title
 // You can change the port by the following methods:
 // port = 9528 npm run dev OR npm run dev --port = 9528
 const port = process.env.port || process.env.npm_config_port || 9528 // dev port
+const proxyTarget = process.env.VUE_APP_URL || 'http://localhost:8080'
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
@@ -30,21 +31,22 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   devServer: {
-    port: port,
+    // port: port,
     open: true,
     overlay: {
       warnings: false,
       errors: true
     },
     proxy: {
+      // 任何以 /api 开头的请求都会被开发服务器转发
       '/api': {
-        //   target: 'http://canzg-wsl.itheima.net/enterpise',
-        // target: 'http://172.17.0.60:8200',
-        // target: process.env.VUE_APP_URL,
-        target: process.env.VUE_APP_URL,
-        ws: false,
-        secure: false,
+        // target 表示真实的后台接口地址，默认走本地 8080，也可以通过 .env 配置 VUE_APP_URL
+        target: process.env.VUE_APP_URL || 'http://localhost:8080',
+        // changeOrigin 会把请求头里的 Host 修改成 target 的主机名，解决跨域
         changeOrigin: true,
+        // 是否转发 websocket 请求，通常保持开启
+        ws: true,
+        // pathRewrite 用来把前缀 /api 去掉，后台只接收真正的路径，例如 /login
         pathRewrite: {
           '^/api': ''
         }
